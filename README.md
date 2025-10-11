@@ -12,13 +12,17 @@ This project is intended to:
 - Commit regularly to track your progress.
 
 
+
 ## 📝 Analysis
 
 **Problem**
 Als Teilzeit-Student hat man viel zu erledigen und muss den Überblick über Studium, Arbeit und Privatleben behalten. So kann es kommen, dass man den Überblick über seine finanzielle Lage verliert. 
 
+
 **Scenario**
 Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und von überall einen Einblick in seine Finanzen erhalten. Auch ist der Budget-Planner individuell anpassbar. 
+
+
 
 **User stories:**
 1. Als User möchte ich, dass die App Passwort geschützt ist. 
@@ -32,11 +36,14 @@ Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und
 9. Als User möchte ich bei Erreichen eines finanziellen Zieles benachrichtigt werden. 
 10. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können. 
 
+
+
 **Use cases:**
 - Show Menu (from `menu.txt`)
 - Create Order (choose pizzas)
 - Show Current Order and Total
 - Print Invoice (to `invoice_xxx.txt`)
+
 
 
 ## ✅ Project Requirements
@@ -47,6 +54,7 @@ Each app must meet the following three criteria in order to be accepted (see als
 3. File processing (read/write)
 
 
+
 ### 1. Interaktive App (d.h. Verarbeitung von Benutzereingaben über die Konsole) 
 
 - Password eingeben 
@@ -54,6 +62,7 @@ Each app must meet the following three criteria in order to be accepted (see als
 - Einnahmen und Ausgaben angeben & anpassen 
 - Budget-Kategorie bearbeiten 
 - Budgetlimit/Finanzziel setzten & anpassen 
+
 
 
 ### 2. Validierung von Daten (z.B. Check von Eingabedaten auf Datentyp oder Format) 
@@ -86,14 +95,17 @@ Wenn User eine Kategorie mit dem Vormonat vergleichen will, wird geprüft, ob di
 -->Rückführung zum Hauptmenü 
 
 
+
 ### 3. Dateiverarbeitung (Lesen und / oder Schreiben von Daten) 
 
 The application reads and writes data using files:
 
 Erst Eingabe: 
+
 Eingabe findet über die Konsole statt und der Output über CSV-File (.csv). 
 
 Spätere Bearbeitung (Manipulation): 
+
 Inputs via CSV-file.   
 
 
