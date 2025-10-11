@@ -1,18 +1,5 @@
 # Persönlicher Budgetplaner (Konsole)
 
-This project is intended to:
-
-- Practice the complete process from **problem analysis to implementation**
-- Apply basic **Python** programming concepts learned in the Programming Foundations module
-- Demonstrate the use of **console interaction, data validation, and file processing**
-- Produce clean, well-structured, and documented code
-- Prepare students for **teamwork and documentation** in later modules
-- Use this repository as a starting point by importing it into your own GitHub account.  
-- Work only within your own copy — do not push to the original template.  
-- Commit regularly to track your progress.
-
-
-
 ## 📝 Analysis
 
 **Problem**
@@ -47,13 +34,6 @@ Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und
 
 
 ## ✅ Project Requirements
-Each app must meet the following three criteria in order to be accepted (see also the official project guidelines PDF on Moodle):
-
-1. Interactive app (console input)
-2. Data validation (input checking)
-3. File processing (read/write)
-
-
 
 ### 1. Interaktive App (d.h. Verarbeitung von Benutzereingaben über die Konsole) 
 
@@ -98,14 +78,17 @@ Wenn User eine Kategorie mit dem Vormonat vergleichen will, wird geprüft, ob di
 
 ### 3. Dateiverarbeitung (Lesen und / oder Schreiben von Daten) 
 
-The application reads and writes data using files:
-
 Erst Eingabe: 
-Eingabe findet über die Konsole statt und der Output über CSV-File (.csv). 
+Eingabe findet über die Konsole statt und der Output über CSV-File (.csv). Wir werden die CSV-Files selbst schreiben und folgendes werden sie enthalten: 
+- Ausgabetyp
+- Betrag
+- Monat & Jahr vom Kauf
 
 Spätere Bearbeitung (Manipulation): 
 Inputs via CSV-file.   
 
+Passwortverschlüsselung
+Das Passwort wird vor der Speicherung mit bcrypt gehasht. Dadurch stellen wir sicher, dass sensible Nutzerdaten auch bei einem Datenleck geschützt bleiben.
 
 ## ⚙️ Implementation
 
@@ -114,15 +97,6 @@ Inputs via CSV-file.
 - Environment: GitHub Codespaces
 - No external libraries
 
-### 📂 Repository Structure
-```text
-PizzaRP/
-├── main.py             # main program logic (console application)
-├── menu.txt            # pizza menu (input data file)
-├── invoice_001.txt     # example of a generated invoice (output file)
-├── docs/               # optional screenshots or project documentation
-└── README.md           # project description and milestones
-```
 
 ### How to Run
 > 🚧 Adjust if needed.
@@ -135,8 +109,8 @@ PizzaRP/
 
 ### Libraries Used
 
-- `os`: Used for file and path operations, such as checking if the menu file exists and creating new files.
-- `glob`: Used to find all invoice files matching a pattern (e.g., `invoice_*.txt`) to determine the next invoice number.
+- bcrypt
+- weitere können noch folgen
 
 These libraries are part of the Python standard library, so no external installation is required. They were chosen for their simplicity and effectiveness in handling file management tasks in a console application.
 
