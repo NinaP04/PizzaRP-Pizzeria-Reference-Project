@@ -1,7 +1,5 @@
 # Persönlicher Budgetplaner (Konsole)
 
-
-
 This project is intended to:
 
 - Practice the complete process from **problem analysis to implementation**
@@ -13,8 +11,7 @@ This project is intended to:
 - Work only within your own copy — do not push to the original template.  
 - Commit regularly to track your progress.
 
-# 🍕 TEMPLATE for documentation
-> 🚧 Please remove this paragraphs having "🚧". These are comments for preparing the documentations.
+
 ## 📝 Analysis
 
 **Problem**
