@@ -101,11 +101,9 @@ Wenn User eine Kategorie mit dem Vormonat vergleichen will, wird geprüft, ob di
 The application reads and writes data using files:
 
 Erst Eingabe: 
-
 Eingabe findet über die Konsole statt und der Output über CSV-File (.csv). 
 
 Spätere Bearbeitung (Manipulation): 
-
 Inputs via CSV-file.   
 
 
