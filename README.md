@@ -99,7 +99,6 @@ Das Passwort wird vor der Speicherung mit bcrypt gehasht. Dadurch stellen wir si
 
 
 ### How to Run
-> 🚧 Adjust if needed.
 1. Open the repository in **GitHub Codespaces**
 2. Open the **Terminal**
 3. Run:
@@ -116,8 +115,6 @@ These libraries are part of the Python standard library, so no external installa
 
 
 ## 👥 Team & Contributions
-
-> 🚧 Fill in the names of all team members and describe their individual contributions below. Each student should be responsible for at least one part of the project.
 
 | Name       | Contribution                                 |
 |------------|----------------------------------------------|
