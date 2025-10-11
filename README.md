@@ -1,7 +1,6 @@
-# 🍕 PizzaRP – Pizzeria Reference Project (Console)
+# Persönlicher Budgetplaner (Konsole)
 
-> 🚧 This is a template repository for student project in the course Programming Foundations at FHNW, BSc BIT.  
-> 🚧 Do not keep this section in your final submission.
+
 
 This project is intended to:
 
@@ -19,20 +18,22 @@ This project is intended to:
 ## 📝 Analysis
 
 **Problem**
-> 🚧 Describe the real-world problem your application solves. (Not HOW, but WHAT)
-
-💡 Example: In a small local pizzeria, the staff writes orders and calculates totals by hand. This causes mistakes and inconsistent orders or discounts.
+Als Teilzeit-Student hat man viel zu erledigen und muss den Überblick über Studium, Arbeit und Privatleben behalten. So kann es kommen, dass man den Überblick über seine finanzielle Lage verliert. 
 
 **Scenario**
-> 🚧 Describe when and how a user will use your application
-
-💡 Example: PizzaRP solves the part of the problem where orders and totals are created by letting a user select items from a menu and automatically generating a correct invoice.
+Durch einen persönlicher Budget-Planner in App-Format kann man ganz einfach und von überall einen Einblick in seine Finanzen erhalten. Auch ist der Budget-Planner individuell anpassbar. 
 
 **User stories:**
-1. As a user, I want to see the pizza menu in the console.
-2. As a user, I want to select pizzas and see the running total.
-3. As a user, I want discounts to be applied automatically.
-4. As a user, I want an invoice to be created and saved as a file.
+1. Als User möchte ich, dass die App Passwort geschützt ist. 
+2. Als User möchte ich jederzeit mein Passwort in der App ändern können. 
+3. Als User möchte ich automatisch ausgeloggt werden bei Inaktivität. 
+4. Als User möchte ich, meine Einnahmen und Ausgaben erfassen & anpassen können. 
+5. Als User möchte ich mein Budget in mehrere Kategorien unterteilen, um den Überblick zu behalten. 
+6. Als User möchte ich die Budget-Kategorien anpassen, hinzufügen und löschen können.  
+7. Als User möchte ich ein Budgetlimit für jede Kategorie festlegen können. 
+8. Als User möchte ich eine Warnung erhalten, wenn ich mein Budget überschreite. 
+9. Als User möchte ich bei Erreichen eines finanziellen Zieles benachrichtigt werden. 
+10. Als User möchte ich, die Daten vom aktuellen Monat mit denen der Vormonate vergleichen können. 
 
 **Use cases:**
 - Show Menu (from `menu.txt`)
@@ -40,92 +41,64 @@ This project is intended to:
 - Show Current Order and Total
 - Print Invoice (to `invoice_xxx.txt`)
 
----
 
 ## ✅ Project Requirements
-
 Each app must meet the following three criteria in order to be accepted (see also the official project guidelines PDF on Moodle):
 
 1. Interactive app (console input)
 2. Data validation (input checking)
 3. File processing (read/write)
 
----
 
-### 1. Interactive App (Console Input)
+### 1. Interaktive App (d.h. Verarbeitung von Benutzereingaben über die Konsole) 
 
-> 🚧 In this section, document how your project fulfills each criterion.  
----
-The application interacts with the user via the console. Users can:
-- View the pizza menu
-- Select pizzas and quantities
-- See the running total
-- Receive an invoice generated as a file
-
----
+- Password eingeben 
+- Passwort ändern 
+- Einnahmen und Ausgaben angeben & anpassen 
+- Budget-Kategorie bearbeiten 
+- Budgetlimit/Finanzziel setzten & anpassen 
 
 
-### 2. Data Validation
+### 2. Validierung von Daten (z.B. Check von Eingabedaten auf Datentyp oder Format) 
 
-The application validates all user input to ensure data integrity and a smooth user experience. This is implemented in `main-invoice.py` as follows:
+Passwort:  
+Check von Eingabedate auf true und Komplexitätsvorgaben. Komplexitätsvorgaben für das Passwort sind:  
+- Mind. 8 Zeichen 
+- Gross- und Kleinschreibung 
+- Mind. eine Zahl 
+- Mind. ein Sonderzeichen 
 
-- **Menu selection:** When the user enters a pizza number, the program checks if the input is a digit and within the valid menu range:
-	```python
-	if not choice.isdigit() or not (1 <= int(choice) <= len(menu)):
-			print("⚠️ Invalid choice.")
-			continue
-	```
-	This ensures only valid menu items can be ordered.
+Bei drei falschen Anmeldeversuchen wird das System beendet. 
+Bei der Passwortänderung wird zusätzlich geprüft, dass neues Passwort ==! Altes Passwort ist.  
+-->Rückführung zum Hauptmenü 
 
-- **Menu file validation:** When reading the menu file, the program checks for valid price values and skips invalid lines:
-	```python
-	try:
-			menu.append({"name": name, "size": size, "price": float(price)})
-	except ValueError:
-			print(f"⚠️ Skipping invalid line: {line.strip()}")
-	```
+Hauptmenü:  
+Wenn User eine Option wählt, wird geprüft, ob die Eingabe (Option Nr.) existiert und der Datentyp stimmt. 
+Von App abmelden = System beenden 
 
-- **Main menu options:** The main menu checks for valid options and handles invalid choices gracefully:
-	```python
-	else:
-			print("⚠️ Invalid choice.")
-	```
+Budget-Kategorien: 
+Wenn User eine Kategorie bearbeiten will, wird geprüft, ob die Eingabe (Kategorie Nr.) existiert und der Datentyp stimmt.  
+-->Rückführung zum Hauptmenü 
 
-These checks prevent crashes and guide the user to provide correct input, matching the validation requirements described in the project guidelines.
+Budgetlimit & Finanzziele: 
+Wenn User ein Limit/Ziel bearbeiten oder erstellen will, wird geprüft, ob die Eingabe (Kategorie Nr.) existiert und der Datentyp stimmt. 
+-->Rückführung zum Hauptmenü 
 
----
-
----
+Budgetanalyse / Vergleich: 
+Wenn User eine Kategorie mit dem Vormonat vergleichen will, wird geprüft, ob die Eingabe (Kategorie Nr.) existiert und der Datentyp stimmt. 
+-->Rückführung zum Hauptmenü 
 
 
-### 3. File Processing
+### 3. Dateiverarbeitung (Lesen und / oder Schreiben von Daten) 
 
 The application reads and writes data using files:
 
-- **Input file:** `menu.txt` — Contains the pizza menu, one item per line in the format `PizzaName;Size;Price`.
-	- Example:
-		```
-		Margherita;Medium;12.50
-		Salami;Large;15.00
-		Funghi;Small;9.00
-		```
-	- The application reads this file at startup to display available pizzas.
+Erst Eingabe: 
+Eingabe findet über die Konsole statt und der Output über CSV-File (.csv). 
 
-- **Output file:** `invoice_001.txt` (and similar) — Generated when an order is completed. Contains a summary of the order, including items, quantities, prices, discounts, and totals.
-	- Example:
-		```
-		Invoice #001
-		----------------------
-		1x Margherita (Medium)   12.50
+Spätere Bearbeitung (Manipulation): 
+Inputs via CSV-file.   
 
-
-		2x Salami (Large)        30.00
-		----------------------
-		Total:                  42.50
-		Discount:                2.50
-		Amount Due:             40.00
-		```
-		- The output file serves as a record for both the user and the pizzeria, ensuring accuracy and transparency.
 
 ## ⚙️ Implementation
 
