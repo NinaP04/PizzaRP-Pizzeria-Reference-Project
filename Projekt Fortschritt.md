@@ -5,7 +5,7 @@
 |Passwort |mit Passwort einloggen| Nina | programmiert |  |
 |Passwort |Passwort mit bcrypt verschlüsseln| Nina | in Arbeit | |
 |Passwort |Passwort ändern| Nina | programmiert |  |
-|Passwort |Passwort mit bcrypt verschlüsseln| Nina |offen|  |
+|Passwort |Passwort Validierung| Nina |offen|  |
 |Budget-Kategorien|              | Paola | - | |
 |Budget-Kategorien |Budgetlimits setzten | - | offen |  |
 |Budget-Kategorien |Finanzziele setzten | - | offen |  |
