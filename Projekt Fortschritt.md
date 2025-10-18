@@ -3,9 +3,9 @@
 | Funktion | Beschreibung | Zuweisung | Stand | Notizen |
 |---------:|--------------|---------------|---------------|---------------|
 |Passwort |mit Passwort einloggen| Nina | programmiert |  |
-|Passwort |Passwort mit bcrypt verschlüsseln| Nina | in Arbeit | |
+|Passwort |Passwort mit bcrypt verschlüsseln| Nina |  offen | |
 |Passwort |Passwort ändern| Nina | programmiert |  |
-|Passwort |Passwort Validierung| Nina |offen|  |
+|Passwort |Passwort Validierung| Nina |in Arbeit|  |
 |Budget-Kategorien|              | Paola | - | |
 |Budget-Kategorien |Budgetlimits setzten | - | offen |  |
 |Budget-Kategorien |Finanzziele setzten | - | offen |  |
