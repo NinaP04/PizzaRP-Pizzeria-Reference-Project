@@ -1,4 +1,4 @@
-import sys  
+import sys  #für Beendung des Programms bei zu vielen fehlerhaften Anmeldungen
 
 #mit Passwort einloggen
 passwort = 1234
