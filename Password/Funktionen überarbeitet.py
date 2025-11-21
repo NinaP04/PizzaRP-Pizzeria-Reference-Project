@@ -34,7 +34,6 @@ else:
 
 
 SpecialSym = ['$', '@', '#', '%', '!', '?', '&', '*']
-val = True
 
 while True:
     val = True
