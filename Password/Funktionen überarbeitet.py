@@ -34,3 +34,14 @@ else:
     print("-Mindestens eine Zahl")
     print("-Mindestens ein Sonderzeichen")
     print("")
+
+
+# Neues Passwort bestätigen
+passwort_neu2 = (input("Geben Sie ihr neues Passwort erneut ein:"))
+print(" ")
+
+if (passwort_neu1) == (passwort_neu2):
+    passwort = passwort_neu1
+    print("\n\033[92mPasswort erfolgreich geändert!\033[0m")
+else:
+    print("\n\033[31mDie Passwörter stimmen nicht überein!\033[0m")
