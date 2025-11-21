@@ -17,3 +17,20 @@ while passwort != passwort_input:
 else:
     print("\n\033[92mErfolgreich eingeloggt!\033[0m")
     print("")
+
+# Funktion - Passwort ändern
+änderung_input = input("Bitte geben Sie ihr Passwort ein:")
+while passwort != änderung_input:
+    print("\n\033[31mUngültiges Passwort!\033[0m")
+    änderung_input = input("Versuchen Sie es erneut:")
+    
+else:
+    print("")
+    print("Passwort neu festlegen")
+    print("")
+    print("Ihr Passwort muss enthalten:")
+    print("-Mindestens 8 Zeichen")
+    print("-Gross- und Kleinschreibung")
+    print("-Mindestens eine Zahl")
+    print("-Mindestens ein Sonderzeichen")
+    print("")
