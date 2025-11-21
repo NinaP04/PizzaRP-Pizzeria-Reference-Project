@@ -1,10 +1,10 @@
 import sys  #für Beendung des Programms bei zu vielen fehlerhaften Anmeldungen
 
 #mit Passwort einloggen
-passwort = 1234
+passwort = "Test1234"
 anmeldeversuche = 0
 
-passwort_input = int(input("Bitte geben Sie ihr Passwort ein:"))
+passwort_input = input("Bitte geben Sie ihr Passwort ein:")
 while passwort != passwort_input:
     anmeldeversuche = anmeldeversuche + 1
 
